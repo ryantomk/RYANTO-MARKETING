@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | My Marketing Agency</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Marketing Agency</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="portfolio-page">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn" onclick="filterPortfolio('all')">All</button>
+                <button class="filter-btn" onclick="filterPortfolio('seo')">SEO</button>
+                <button class="filter-btn" onclick="filterPortfolio('social')">Social Media</button>
+                <button class="filter-btn" onclick="filterPortfolio('ads')">Ads</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item seo">
+                    <img src="images/portfolio1.png" alt="SEO Campaign">
+                    <h4>SEO Campaign</h4>
+                    <p>Increased organic traffic by 150% in 6 months.</p>
+                </div>
+                <div class="portfolio-item social">
+                    <img src="images/portfolio2.png" alt="Social Media Campaign">
+                    <h4>Social Media Campaign</h4>
+                    <p>Boosted engagement on Instagram by 300%.</p>
+                </div>
+                <div class="portfolio-item ads">
+                    <img src="images/portfolio3.png" alt="Ads Campaign">
+                    <h4>Google Ads Campaign</h4>
+                    <p>Generated $50K revenue in 3 months.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Marketing Agency | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            items.forEach(item => {
+                if(category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
 <!-- Placeholder for portfolio.html -->
